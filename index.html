@@ -21,13 +21,38 @@
         TTER
       </h1>
       <div class="container">
-        <div class="input-section"></div>
-        <div class="output-section"></div>
+        <div class="input-section">
+          <div class="input-bill">
+            <label for="">Bill</label>
+            <input type="number" />
+          </div>
+          <label for="">Select Tip %</label>
+          <div class="input-tip">
+            <button class="btn-input-tip 5">5%</button>
+            <button class="btn-input-tip 10">10%</button>
+            <button class="btn-input-tip 15">15%</button>
+            <button class="btn-input-tip 25">25%</button>
+            <button class="btn-input-tip 50">50%</button>
+            <button class="btn-input-tip custom">Custom</button>
+          </div>
+          <div class="input-number-of-people">
+            <label for=""> Number of People</label>
+            <input type="number" />
+          </div>
+        </div>
+        <div class="output-section">
+          <div class="output-tip">
+            <label for="">Tip Amount/person</label>
+            <output class="tip"></output>
+          </div>
+          <div class="output-total-amount">
+            <label for="">Total/person</label>
+            <output class="total"></output>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
       </div>
     </main>
-
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
 
     <div class="attribution" role="contentinfo">
       Challenge by
