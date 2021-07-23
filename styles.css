@@ -3,9 +3,9 @@
 :root {
   --Strong_cyan: hsl(172, 67%, 45%);
   --Very_dark_cyan: hsl(183, 100%, 15%);
-  --Dark_grayish_cyan: hsl(186, 14%, 43%);
+  --Dark_grayish_cyan1: hsl(186, 14%, 43%);
   --Dark_grayish_cyan: hsl(184, 14%, 56%);
-  --Light_grayish_cyan: hsl(185, 41%, 84%);
+  --Light_grayish_cyan: hsl(186, 28%, 86%);
   --Light_grayish_cyan2: hsl(189, 41%, 97%);
   --White: hsl(0, 0%, 100%);
 }
@@ -21,17 +21,22 @@ body {
   text-align: center;
   font-family: 'Space Mono', monospace;
 }
-
+h1 {
+  color: var(--Dark_grayish_cyan);
+}
 .container {
   background-color: var(--White);
   width: 365px;
-  height: 600px;
+  height: 700px;
   border-radius: 10px;
   padding: 25px;
+  text-align: left;
 }
 .input-section {
   background-color: var(--White);
-  height: 300px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-input-tip {
@@ -43,6 +48,29 @@ body {
   height: 50px;
   border: none;
   margin: 5px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  color: var(--Dark_grayish_cyan1);
+  font-weight: 700;
+  margin: 20px 0 20px 0;
+}
+.output-section label {
+  color: var(--Light_grayish_cyan);
+}
+label > span {
+  color: var(--Dark_grayish_cyan1);
+}
+
+input {
+  display: block;
+  width: 90%;
+  height: 35px;
+  background-color: var(--Light_grayish_cyan);
+  padding: 0 10px 0 10px;
+  border: none;
   border-radius: 5px;
 }
 .output-section {
