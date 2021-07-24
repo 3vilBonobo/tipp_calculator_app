@@ -25,7 +25,8 @@
         <div class="input-section">
           <div class="input-bill">
             <label for="">Bill</label>
-            <input type="number" />
+            
+            <input type="number" required />
           </div>
           <label for="">Select Tip %</label>
           <div class="input-tip">
@@ -38,7 +39,7 @@
           </div>
           <div class="input-number-of-people">
             <label for=""> Number of People</label>
-            <input type="number" />
+            <input type="number" min="1" required/>
           </div>
         </div>
         <div class="output-section">
@@ -47,14 +48,15 @@
               >Tip Amount <br />
               <span>/person</span>
             </label>
-            <output class="tip"></output>
+            <output class="tip">$ 0.0</output>
           </div>
           <div class="output-total-amount">
             <label for=""
               >Total <br />
               <span>/person</span>
+        
             </label>
-            <output class="total"></output>
+            <output class="total">$ 0.0</output>
           </div>
           <button class="reset">Reset</button>
         </div>
