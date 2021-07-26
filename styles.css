@@ -3,6 +3,7 @@
 :root {
   --Strong_cyan: hsl(172, 67%, 45%);
   --Very_dark_cyan: hsl(183, 100%, 15%);
+  --Very_dark_cyan2: hsl(183, 65%, 29%);
   --Dark_grayish_cyan1: hsl(186, 14%, 43%);
   --Dark_grayish_cyan: hsl(184, 14%, 56%);
   --Light_grayish_cyan: hsl(186, 28%, 86%);
@@ -50,6 +51,9 @@ input {
   font-weight: 700;
   border-radius: 5px;
 }
+input::placeholder {
+  color: var(--Dark_grayish_cyan);
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -75,7 +79,8 @@ input:focus::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 375px;
+  max-width: 375px;
+  margin: 5px;
   padding: 25px;
   border-radius: 10px;
 }
@@ -101,7 +106,7 @@ input:focus::placeholder {
   color: var(--Light_grayish_cyan2);
   font-size: 20px;
   font-weight: 700;
-  width: 142px;
+  width: 135px;
   height: 50px;
   margin: 5px;
   border-radius: 5px;
@@ -137,8 +142,9 @@ input:focus::placeholder {
   background-color: var(--Very_dark_cyan);
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 100%;
-  padding: 40px 20px 20px 20px;
+  padding: 20px;
   text-align: left;
   border-radius: 10px;
 }
@@ -148,22 +154,25 @@ input:focus::placeholder {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: 10px;
 }
 .tip {
   color: var(--Strong_cyan);
-  font-size: 25px;
+  font-size: 40px;
   font-weight: 700;
 }
 
 .total {
   color: var(--Strong_cyan);
-  font-size: 25px;
+  font-size: 40px;
   font-weight: 700;
 }
 .reset {
-  background-color: var(--Strong_cyan);
+  display: block;
+  background-color: var(--Very_dark_cyan2);
   color: var(--Very_dark_cyan);
   text-transform: uppercase;
+  align-self: flex-end;
   font-size: 18px;
   font-weight: 700;
   width: 100%;
@@ -187,25 +196,34 @@ input:focus::placeholder {
     flex-direction: row;
     align-items: center;
     width: 900px;
+    max-width: none;
     height: 400px;
     padding: 25px;
     margin: 20px;
     border-radius: 10px;
   }
-
+  input {
+    height: 40px;
+  }
   .input-section {
     width: 800px;
   }
   .input-bill {
     margin-bottom: 20px;
   }
-
+  .btn-input-tip {
+    width: 115px;
+    height: 40px;
+  }
   .input-number-of-people {
     margin-bottom: 0;
   }
   .output-section {
     height: 100%;
-    width: 100%;
+    width: 90%;
     margin: 0 0 0 20px;
+  }
+  .reset {
+    height: 40px;
   }
 }
