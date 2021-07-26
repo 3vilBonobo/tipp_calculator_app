@@ -17,15 +17,13 @@
   </head>
   <body>
     <main role="main">
-      <h1>
-        SPLI <br />
-        TTER
-      </h1>
+     
+      <img src="./images/logo.svg" alt="app logo">
       <div class="container">
         <div class="input-section">
           <div class="input-bill">
             <label for="">Bill</label>
-            
+            <img class="dollar" src="./images/icon-dollar.svg" alt="dollar icon">
             <input id="bill"
             type="number" placeholder="0" required />
           </div>
@@ -40,7 +38,8 @@
           </div>
           <div class="input-number-of-people">
             <label for=""> Number of People</label>
-            <input type="number" min="1" placeholder="0" required/>
+            <img class="person" src="./images/icon-person.svg" alt="person icon">
+            <input id="people" type="number" min="1" placeholder="0" required/>
           </div>
         </div>
         <div class="output-section">
@@ -59,7 +58,8 @@
             </label>
             <output class="total">$ 0.00</output>
           </div>
-          <button class="reset">Reset</button>
+          <div class="reset-wrapper"><button class="reset">Reset</button></div>
+          
         </div>
       </div>
     </main>
