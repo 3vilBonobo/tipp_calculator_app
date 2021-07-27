@@ -3,72 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!-- JavaScript -->
     <script src="./app.js" defer></script>
-
-    <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <main role="main">
-     
-      <img src="./images/logo.svg" alt="app logo">
-      <div class="container">
+    <div class="container" role="main">
+      <img src="./images/logo.svg" alt=" Splitter logo " class="logo" />
+      <div class="card">
         <div class="input-section">
-          <div class="input-bill">
-            <label for="">Bill</label>
-            <img class="dollar" src="./images/icon-dollar.svg" alt="dollar icon">
-            <input id="bill"
-            type="number" placeholder="0" required />
+          <div class="bill-container">
+            <div class="bill-label-wrapper">
+              <label class="bill label" for="">Bill</label>
+            </div>
+            <div class="bill-input-wrapper">
+              <input type="number" class="bill input" placeholder="0" />
+              <img
+                src="./images/icon-dollar.svg"
+                alt="dollar icon"
+                class="dollar-img"
+              />
+            </div>
           </div>
-          <label for="">Select Tip %</label>
-          <div class="input-tip">
-            <button class="btn-input-tip">5%</button>
-            <button class="btn-input-tip">10%</button>
-            <button class="btn-input-tip">15%</button>
-            <button class="btn-input-tip">25%</button>
-            <button class="btn-input-tip">50%</button>
-            <input id="custom" class="btn-input-tip" placeholder="Custom"></input>
+          <div class="tip-container">
+            <div class="btn-label-wrapper">
+              <label for="" class="btn label">Select Tip %</label>
+            </div>
+            <div class="btn-wrapper">
+              <div class="btn">5%</div>
+              <div class="btn">10%</div>
+              <div class="btn active">15%</div>
+              <div class="btn">20%</div>
+              <div class="btn">50%</div>
+              <input type="number" class="btn input" placeholder="Custom" />
+            </div>
           </div>
-          <div class="input-number-of-people">
-            <label for=""> Number of People</label>
-            <img class="person" src="./images/icon-person.svg" alt="person icon">
-            <input id="people" type="number" min="1" placeholder="0" required/>
+          <div class="people-container">
+            <div class="people-label-wrapper">
+              <label for="" class="people label">Number of People</label>
+            </div>
+            <div class="people-input-wrapper">
+              <input type="number" class="people input" placeholder="0" />
+              <img
+                src="./images/icon-person.svg"
+                alt="person icon"
+                class="people-img"
+              />
+            </div>
           </div>
         </div>
         <div class="output-section">
-          <div class="output-tip">
-            <label for=""
-              >Tip Amount <br />
-              <span>/person</span>
-            </label>
-            <output class="tip">$ 0.00</output>
+          <div class="amount-container">
+            <div class="tip-text-wrapper">
+              <div class="tip-title">Tip Amount</div>
+              <div class="tip-analogy">/ person</div>
+            </div>
+            <div class="tip">0.00</div>
           </div>
-          <div class="output-total-amount">
-            <label for=""
-              >Total <br />
-              <span>/person</span>
-        
-            </label>
-            <output class="total">$ 0.00</output>
+          <div class="total container">
+            <div class="total-text-wrapper">
+              <div class="total-title">Total</div>
+              <div class="total-analogy">/ person</div>
+            </div>
+            <div class="total">0.00</div>
           </div>
-          <div class="reset-wrapper"><button class="reset">Reset</button></div>
-          
+          <div class="reset">Reset</div>
         </div>
       </div>
-    </main>
-
-    <div class="attribution" role="contentinfo">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Irinella Boutsika</a>.
+      <div class="attribution" role="contentinfo">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Irinella Boutsika</a>.
+      </div>
     </div>
   </body>
 </html>
