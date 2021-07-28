@@ -39,6 +39,7 @@ body {
 .card {
   background-color: white;
   width: 100%;
+  max-width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,6 +66,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.card .input-section .input {
+  background-color: #c5e4e7;
+  font-size: 2rem;
+  text-align: end;
+}
+
+.card .input-section .dollar-img,
+.card .input-section .people-img {
+  position: relative;
+  top: -30px;
+  left: 10px;
 }
 
 .card .input-section .btn-wrapper {
@@ -104,10 +118,6 @@ body {
   font-size: 2.2rem;
   font-weight: 700;
   border-radius: 5px;
-}
-
-.card .input-section .btn-wrapper .input {
-  background-color: #c5e4e7;
 }
 
 .card .output-section {
