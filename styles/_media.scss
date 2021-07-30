@@ -1,0 +1,16 @@
+@media (min-width: 780px) {
+  .container {
+    height: 100vh;
+    .card {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 30px;
+
+      .output-section {
+        height: 100%;
+        margin-left: 20px;
+      }
+    }
+  }
+}
