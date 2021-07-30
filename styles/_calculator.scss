@@ -60,13 +60,71 @@
         border-radius: 5px;
       }
     }
+    .labels {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .error {
+      position: relative;
+      color: rgb(211, 55, 55);
+      font-weight: 700;
+    }
   }
 
   .output-section {
     background-color: $very-dark-cyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
+    height: 250px;
+    padding: 30px;
+    border-radius: 10px;
+
+    .title {
+      color: $light-grayish-cyan-1;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .analogy {
+      color: $dark-grayish-cyan-2;
+      font-weight: 700;
+    }
+    .calculation {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $strong-cyan;
+    }
+    .amount-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .total-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .reset {
+      background-color: $dark-cyan;
+      color: $very-dark-cyan;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 4rem;
+      border-radius: 5px;
+    }
   }
 }
+
 .label {
   color: $dark-grayish-cyan-1;
   font-size: 1.5rem;
