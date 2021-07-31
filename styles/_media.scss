@@ -4,9 +4,23 @@
     .card {
       flex-direction: row;
       justify-content: space-between;
-      max-width: 800px;
+      max-width: 780px;
+      height: 390px;
       margin: 30px;
 
+      .input-section {
+        margin-top: 30px;
+        .btn-wrapper {
+          gap: 12px;
+
+          .btn {
+            width: 30%;
+            height: 4rem;
+            font-size: 1.9rem;
+            font-weight: 700;
+          }
+        }
+      }
       .output-section {
         height: 100%;
         margin-left: 20px;

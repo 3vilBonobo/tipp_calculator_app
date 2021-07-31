@@ -14,6 +14,16 @@ body {
   font-family: 'Space Mono', monospace;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .container {
   background-color: #c5e4e7;
   width: 100%;
@@ -68,17 +78,53 @@ body {
           flex-direction: column;
 }
 
+.card .input-section .label {
+  color: #5e7a7d;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .card .input-section .input {
-  background-color: #c5e4e7;
-  font-size: 2rem;
+  background-color: #f4fafa;
+  color: #00494d;
+  font-size: 2.3rem;
+  font-weight: 700;
   text-align: end;
+  width: 100%;
+  height: 4.5rem;
+  padding: 0 1rem 0 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.card .input-section .input:focus,
+.card .input-section .input:active,
+.card .input-section .input:hover {
+  border: 3px solid #26c0ab;
+  outline: none;
 }
 
 .card .input-section .dollar-img,
 .card .input-section .people-img {
   position: relative;
-  top: -30px;
+  top: -33px;
   left: 10px;
+}
+
+.card .input-section .bill-container {
+  margin-bottom: 10px;
+}
+
+.card .input-section .bill-container .bill-label-wrapper {
+  margin-bottom: 8px;
+}
+
+.card .input-section .tip-container {
+  margin-bottom: 10px;
+}
+
+.card .input-section .tip-container .btn-label-wrapper {
+  margin-bottom: 15px;
 }
 
 .card .input-section .btn-wrapper {
@@ -105,7 +151,7 @@ body {
   background-color: #00494d;
   color: white;
   width: 47%;
-  height: 5rem;
+  height: 4.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,6 +165,47 @@ body {
   font-size: 2.2rem;
   font-weight: 700;
   border-radius: 5px;
+}
+
+.card .input-section .btn-wrapper #btn-input:focus,
+.card .input-section .btn-wrapper #btn-input:active,
+.card .input-section .btn-wrapper #btn-input:hover {
+  background-color: #f4fafa;
+  color: #115b5f;
+}
+
+.card .input-section .btn-wrapper .btn:active,
+.card .input-section .btn-wrapper .btn:focus,
+.card .input-section .btn-wrapper .btn:hover {
+  background-color: #26c0ab;
+}
+
+.card .input-section .btn-wrapper .input {
+  background-color: #f4fafa;
+}
+
+.card .input-section .btn-wrapper .input::-webkit-input-placeholder {
+  font-weight: 700;
+}
+
+.card .input-section .btn-wrapper .input:-ms-input-placeholder {
+  font-weight: 700;
+}
+
+.card .input-section .btn-wrapper .input::-ms-input-placeholder {
+  font-weight: 700;
+}
+
+.card .input-section .btn-wrapper .input::placeholder {
+  font-weight: 700;
+}
+
+.card .input-section .people-container {
+  margin-bottom: 10px;
+}
+
+.card .input-section .people-container .people {
+  margin-bottom: 5px;
 }
 
 .card .input-section .labels {
@@ -140,7 +227,9 @@ body {
 .card .input-section .error {
   position: relative;
   color: #d33737;
+  font-size: 1.2rem;
   font-weight: 700;
+  visibility: hidden;
 }
 
 .card .output-section {
@@ -169,11 +258,12 @@ body {
 
 .card .output-section .analogy {
   color: #7f9c9f;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
 .card .output-section .calculation {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #26c0ab;
 }
@@ -226,23 +316,19 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 4rem;
+  height: 4.6rem;
   border-radius: 5px;
 }
 
-.label {
-  color: #5e7a7d;
-  font-size: 1.5rem;
-  font-weight: 700;
+.card .output-section .reset:active,
+.card .output-section .reset:hover,
+.card .output-section .reset:focus {
+  background-color: #26c0ab;
 }
 
-.input {
-  background-color: #f4fafa;
-  width: 100%;
-  height: 4rem;
-  padding: 1rem;
-  border: none;
-  border-radius: 5px;
+.attribution {
+  font-size: 1.2rem;
+  margin-top: 50px;
 }
 
 @media (min-width: 780px) {
@@ -257,8 +343,21 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    max-width: 800px;
+    max-width: 780px;
+    height: 390px;
     margin: 30px;
+  }
+  .container .card .input-section {
+    margin-top: 30px;
+  }
+  .container .card .input-section .btn-wrapper {
+    gap: 12px;
+  }
+  .container .card .input-section .btn-wrapper .btn {
+    width: 30%;
+    height: 4rem;
+    font-size: 1.9rem;
+    font-weight: 700;
   }
   .container .card .output-section {
     height: 100%;

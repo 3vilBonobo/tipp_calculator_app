@@ -12,3 +12,11 @@ body {
   background-color: var(--Light_grayish_cyan);
   font-family: 'Space Mono', monospace;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
