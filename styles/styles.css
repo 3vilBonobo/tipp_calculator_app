@@ -167,11 +167,33 @@ input[type='number'] {
   border-radius: 5px;
 }
 
-.card .input-section .btn-wrapper #btn-input:focus,
-.card .input-section .btn-wrapper #btn-input:active,
-.card .input-section .btn-wrapper #btn-input:hover {
+.card .input-section .btn-wrapper .custom {
   background-color: #f4fafa;
   color: #115b5f;
+  width: 47%;
+  height: 4.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.card .input-section .btn-wrapper .custom:focus,
+.card .input-section .btn-wrapper .custom:active,
+.card .input-section .btn-wrapper .custom:hover {
+  color: #115b5f;
+  border: 3px solid #26c0ab;
 }
 
 .card .input-section .btn-wrapper .btn:active,
@@ -353,7 +375,8 @@ input[type='number'] {
   .container .card .input-section .btn-wrapper {
     gap: 12px;
   }
-  .container .card .input-section .btn-wrapper .btn {
+  .container .card .input-section .btn-wrapper .btn,
+  .container .card .input-section .btn-wrapper .custom {
     width: 30%;
     height: 4rem;
     font-size: 1.9rem;
