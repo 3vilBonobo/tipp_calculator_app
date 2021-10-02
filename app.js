@@ -7,15 +7,16 @@ let tip = document.querySelector('.tip');
 let resetBtn = document.querySelector('.reset');
 let error = document.querySelector('.error');
 
-billInput.addEventListener('input', calculate);
+billInput.addEventListener('input', checkValues);
 buttonsInput.forEach(getBtnInput);
-customInput.addEventListener('input', calculate);
-peopleInput.addEventListener('input', calculate);
+customInput.addEventListener('input', checkValues);
+peopleInput.addEventListener('input', checkValues);
 resetBtn.addEventListener('click', reset);
 
 function getBtnInput(e) {
   e.addEventListener('click', () => {
-    console.log(e.getAttribute('data-value'));
+    custom.input = e.getAttribute('data-value');
+    calculate();
   });
 }
 
@@ -24,8 +25,18 @@ function reset() {
   buttonsInput.value = '';
   customInput.value = '';
   peopleInput.value = '';
+  error.style.visibility = 'hidden';
   total.innerText = '$0.00';
   tip.innerText = '$0.00';
+}
+
+function checkValues() {
+  if (peopleInput.value == 0) {
+    error.style.visibility = 'visible';
+  } else {
+    error.style.visibility = 'hidden';
+    calculate();
+  }
 }
 
 function calculate() {
