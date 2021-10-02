@@ -6,28 +6,24 @@ let total = document.querySelector('.total');
 let tip = document.querySelector('.tip');
 let resetBtn = document.querySelector('.reset');
 let error = document.querySelector('.error');
+let tipInput;
 
 billInput.addEventListener('input', checkValues);
 buttonsInput.forEach(getBtnInput);
-customInput.addEventListener('input', checkValues);
+customInput.addEventListener('input', updateTipValueCustom);
 peopleInput.addEventListener('input', checkValues);
 resetBtn.addEventListener('click', reset);
-
 function getBtnInput(e) {
-  e.addEventListener('click', () => {
-    custom.input = e.getAttribute('data-value');
-    calculate();
-  });
+  e.addEventListener('click', updateTipValueBtn);
 }
 
-function reset() {
-  billInput.value = '';
-  buttonsInput.value = '';
-  customInput.value = '';
-  peopleInput.value = '';
-  error.style.visibility = 'hidden';
-  total.innerText = '$0.00';
-  tip.innerText = '$0.00';
+function updateTipValueCustom() {
+  tipInput = customInput.value;
+  checkValues();
+}
+function updateTipValueBtn() {
+  tipInput = this.getAttribute('data-value');
+  checkValues();
 }
 
 function checkValues() {
@@ -42,8 +38,19 @@ function checkValues() {
 function calculate() {
   total.innerText = `$${(billInput.value / peopleInput.value).toFixed(2)}`;
   tip.innerText = `$${(
-    (billInput.value * customInput.value) /
+    (billInput.value * tipInput) /
     100 /
     peopleInput.value
   ).toFixed(2)}`;
 }
+
+function reset() {
+  billInput.value = '';
+  buttonsInput.value = '';
+  customInput.value = '';
+  peopleInput.value = '';
+  error.style.visibility = 'hidden';
+  total.innerText = '$0.00';
+  tip.innerText = '$0.00';
+}
+window.onload = reset;
