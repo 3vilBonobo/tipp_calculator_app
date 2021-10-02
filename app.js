@@ -2,32 +2,30 @@ let billInput = document.querySelector('#bill');
 let buttonsInput = document.querySelectorAll('.btn');
 let customInput = document.querySelector('.custom');
 let peopleInput = document.querySelector('#people');
-let total = 0;
-let tip = 0;
+let total = document.querySelector('.total');
+let tip = document.querySelector('.tip');
 let resetBtn = document.querySelector('.reset');
 
-billInput.addEventListener('input', getBillInput);
+billInput.addEventListener('input', calculate);
 buttonsInput.forEach(getBtnInput);
-customInput.addEventListener('input', getCustomInput);
-peopleInput.addEventListener('input', getPeopleInput);
+customInput.addEventListener('input', calculate);
+peopleInput.addEventListener('input', calculate);
 resetBtn.addEventListener('click', reset);
-
-function getBillInput() {
-  bill = billInput.value;
-
-  console.log(`The bill is ${bill}`);
-}
 
 function getBtnInput() {}
 
-function getCustomInput() {
-  custom = customInput.value;
-  console.log(`The tip is ${custom}`);
+function reset() {
+  billInput.value = '';
+  buttonsInput.value = '';
+  customInput.value = '';
+  peopleInput.value = '';
+  total.innerText = '$0.00';
+  tip.innerText = '$0.00';
 }
 
-function getPeopleInput() {
-  people = peopleInput.value;
-  console.log(`There are ${people} people`);
+function calculate() {
+  total.innerText = `$${billInput.value / peopleInput.value}`;
+  tip.innerText = `$${
+    (billInput.value * customInput.value) / 100 / peopleInput.value
+  }`;
 }
-
-function reset() {}
