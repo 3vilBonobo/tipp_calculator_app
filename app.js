@@ -5,6 +5,7 @@ let peopleInput = document.querySelector('#people');
 let total = document.querySelector('.total');
 let tip = document.querySelector('.tip');
 let resetBtn = document.querySelector('.reset');
+let error = document.querySelector('.error');
 
 billInput.addEventListener('input', calculate);
 buttonsInput.forEach(getBtnInput);
@@ -12,7 +13,11 @@ customInput.addEventListener('input', calculate);
 peopleInput.addEventListener('input', calculate);
 resetBtn.addEventListener('click', reset);
 
-function getBtnInput() {}
+function getBtnInput(e) {
+  e.addEventListener('click', () => {
+    console.log(e.getAttribute('data-value'));
+  });
+}
 
 function reset() {
   billInput.value = '';
@@ -24,8 +29,10 @@ function reset() {
 }
 
 function calculate() {
-  total.innerText = `$${billInput.value / peopleInput.value}`;
-  tip.innerText = `$${
-    (billInput.value * customInput.value) / 100 / peopleInput.value
-  }`;
+  total.innerText = `$${(billInput.value / peopleInput.value).toFixed(2)}`;
+  tip.innerText = `$${(
+    (billInput.value * customInput.value) /
+    100 /
+    peopleInput.value
+  ).toFixed(2)}`;
 }
