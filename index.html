@@ -28,12 +28,13 @@
   </head>
   <body>
     <div class="container" role="main">
+      <h1>Tip Calculator</h1>
       <img src="./images/logo.svg" alt=" Splitter logo " class="logo" />
       <div class="card">
         <div class="input-section">
           <div class="bill-container">
             <div class="bill-label-wrapper">
-              <label class="bill label" for="">Bill</label>
+              <label class="bill label" for="bill">Bill</label>
             </div>
             <div class="bill-input-wrapper">
               <input
@@ -52,9 +53,9 @@
           </div>
           <div class="tip-container">
             <div class="btn-label-wrapper">
-              <label for="" class="btn label">Select Tip %</label>
+              <label for="btns" class="btn label">Select Tip %</label>
             </div>
-            <div class="btn-wrapper">
+            <div class="btn-wrapper" id="btns">
               <div class="btn" data-value="5">5%</div>
               <div class="btn" data-value="10">10%</div>
               <div class="btn active" data-value="15">15%</div>
@@ -65,11 +66,11 @@
           </div>
           <div class="people-container">
             <div class="labels">
-              <label for="" class="people label">Number of People</label>
-              <label class="error">Can't be zero</label>
+              <label for="people" class="people label">Number of People</label>
+              <label for="people-wrap" class="error">Can't be zero</label>
             </div>
 
-            <div class="people-input-wrapper">
+            <div class="people-input-wrapper" id="people-wrap">
               <input
                 type="number"
                 id="people"
@@ -103,7 +104,7 @@
           <div class="reset">Reset</div>
         </div>
       </div>
-      <div class="attribution" role="contentinfo">
+      <div class="attribution">
         Challenge by
         <a
           href="https://www.frontendmentor.io?ref=challenge"

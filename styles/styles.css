@@ -24,6 +24,10 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+h1 {
+  visibility: hidden;
+}
+
 .container {
   background-color: #c5e4e7;
   width: 100%;
