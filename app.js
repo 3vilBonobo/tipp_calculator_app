@@ -31,7 +31,13 @@ function checkValues() {
     error.style.visibility = 'visible';
   } else {
     error.style.visibility = 'hidden';
+    activateResetBtn();
     calculate();
+  }
+}
+function activateResetBtn() {
+  if (!billInput.value == '' && !peopleInput.value == '' && !tipInput == '') {
+    resetBtn.style.backgroundColor = '#26c0ab';
   }
 }
 
@@ -52,5 +58,6 @@ function reset() {
   error.style.visibility = 'hidden';
   total.innerText = '$0.00';
   tip.innerText = '$0.00';
+  resetBtn.style.backgroundColor = '#115b5f';
 }
 window.onload = reset;
