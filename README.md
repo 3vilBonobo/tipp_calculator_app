@@ -1,2 +1,2 @@
 # tipp_calculator_app
-A simple tipp calculator app, made with Vanilla JS as part of the Frontend Mentor challenges.
+Tipp calculator app, made with Vanilla JS. Design provided by Forntend Mentor
